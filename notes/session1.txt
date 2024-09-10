@@ -69,4 +69,16 @@ HTML:
 <img>
 <p>
 
+CSS: Cascading Style Sheets
+Contains properties
+
+Three ways:
+1) Inline
+2) style tag
+3) Create a separate CSS file
+
+
+Flexbox: 
+Media queries
+
 
