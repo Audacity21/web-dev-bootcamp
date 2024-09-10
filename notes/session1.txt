@@ -1,84 +1,143 @@
-Goal: How to build applications in general.
+Bootcamp Goal:
+- Learn how to build applications, not just web applications.
+- Emphasis on understanding the core concepts and structure of application development.
 
-Structure: 
+Structure:
+- Two lecture sessions every week.
+- Focus on the conceptual understanding of the application development process.
 
-Steps to build an applications:
-1) Idea.
-2) Know how to collaborate with people.
-3) Knowledge of the technology that you're using.
-4) How to share it with the public.
+Steps to Build an Application:
+1. Idea: Start with a clear concept or problem you want to solve.
+2. Collaboration: Learn how to work effectively with others.
+3. Technology Knowledge: Understand the technology stack you're using.
+4. Sharing with the Public: Know the different ways to deploy or share your application.
 
-Session 1: Big picture.
+Session 1: The Big Picture
 
-How many ways of sharing files do you know?
-1) Github
-2) Drive
-3) Whatsapp
-4) Vercel
-5 )Share it
-6) netlify
-7) Anydesk
+Ways to Share Files:
+1. GitHub: Version control and collaboration platform.
+2. Google Drive: Cloud storage and file sharing.
+3. WhatsApp: Quick sharing via messaging.
+4. Vercel: Deployment for web applications.
+5. ShareIt: Offline file sharing.
+6. Netlify: Web application deployment.
+7. AnyDesk: Remote desktop sharing.
 
-Centralised Version control system:
+Version Control Systems
 
+Centralized Version Control System (CVCS):
 Disadvantages:
-1) Accessing at same time inefficient
-2) Previous versions
-3) Central system may get damaged
-4) multiple changes to same file.
+1. Inefficient simultaneous access.
+2. Difficult to manage previous versions.
+3. Vulnerable to data loss if the central system fails.
+4. Conflicts when multiple people make changes to the same file.
 
-Git - Distributed Version control system:
-Central server. 
+Git - Distributed Version Control System (DVCS):
+- Allows multiple copies of the entire project repository to exist.
+- Works on a central server as well as local copies, improving collaboration and backup.
 
-Git vs Github: Git - technology
-github: interface
+Git vs. GitHub:
+- Git: A version control system technology.
+- GitHub: A web-based platform that uses Git and adds collaboration features.
 
-Terminologies: 
-1) Repository: Project 
-2) Readme: information about project
-3) .gitignore: files to be excluded
-4) clone:
-5) commmit: 
-6) push: 
+Important Git Terminologies:
+1. Repository: A project’s folder containing all files and history.
+2. Readme: Documentation providing information about the project.
+3. .gitignore: Specifies files that Git should ignore.
+4. Clone: Copying a repository from a server to your local machine.
+5. Commit: Saving changes to the local repository.
+6. Push: Uploading local commits to a remote repository.
+7. Staging: Intermediate step where changes are added with git add before committing, allowing you to selectively prepare and review changes for the next commit.
 
-Commands:
-1) git clone <link>
-2) git status: status of our files.
-3) git add 
- - git add . : add the entire files that are created.
- - git add <filename1> <filename2>
-4) git commit
-5) git revert
-6) git push
-7) git pull
+Basic Git Commands:
+1. Clone: git clone <link> - Copy a repository into local system.
+2. Status: git status - View the status of your working directory.
+3. Add: 
+   - git add . - Stage all changes.
+   - git add <filename1> <filename2> - Stage specific files.
+4. Commit: git commit -m "message" - Save staged changes with a message.
+5. Revert: git revert <commit> - Undo a specific commit.
+6. Push: git push - Send commits to the remote repository.
+7. Pull: git pull - Fetch and merge changes from the remote repository.
 
-HTML, CSS, JS- Human body.
+Website vs. Web Application:
+- Website: A static collection of pages.
+- Web Application: A dynamic, interactive program accessed through a browser.
 
-Website and Web application.
+Building Blocks of Web:
+1. HTML (HyperText Markup Language): The skeleton of the webpage.
+   - Common tags: <html>, <head>, <body>, <h1>, <div>, <p>, <img>, <a>
+2. CSS (Cascading Style Sheets): The styling of the webpage.
+   - Adds visual elements like colors, fonts, and layout.
+   - Three ways to include CSS:
+     1. Inline CSS: Styles written directly in the HTML tags.
+     2. Internal CSS: Using a <style> tag within the HTML <head>.
+     3. External CSS: A separate file linked to the HTML document.
+   - Important CSS concepts: Flexbox, Media Queries
+3. JavaScript: Adds functionality and interactivity to web pages.
 
-HTML: Skeleton
-CSS: Skin
-Js: Organs
+Important CSS Properties:
 
-HTML: 
-<html>
-<h1>
-<head>
-<body>
-<div>
-<img>
-<p>
+1. Color and Background:
+   - color: Sets the text color.
+     color: blue;
+   - background-color: Sets the background color of an element.
+     background-color: #f0f0f0;
+   - background-image: Sets an image as the background.
+     background-image: url('background.jpg');
 
-CSS: Cascading Style Sheets
-Contains properties
+2. Typography:
+   - font-size: Defines the size of the text.
+     font-size: 16px;
+   - font-weight: Sets the thickness of the text (e.g., bold).
+     font-weight: bold;
+   - text-align: Aligns text horizontally (e.g., center, left, right).
+     text-align: center;
 
-Three ways:
-1) Inline
-2) style tag
-3) Create a separate CSS file
+3. Layout:
+   - margin: Controls the space outside the element's border.
+     margin: 10px;
+   - padding: Controls the space inside the element's border.
+     padding: 20px;
+   - border: Defines the border around an element.
+     border: 1px solid black;
 
+Flexbox:
 
-Flexbox: 
-Media queries
+Flexbox is a CSS layout module designed to help align and distribute space among items in a container. It provides more efficient layouts, especially for responsive designs.
 
+Key Flexbox Properties:
+- Container Properties:
+  - display: flex; - Enables Flexbox on the container.
+  - flex-direction: Defines the direction of the flex items (row, column).
+    flex-direction: row;
+  - justify-content: Aligns items horizontally (start, center, space-between, etc.).
+    justify-content: space-between;
+  - align-items: Aligns items vertically (flex-start, center, baseline, stretch).
+    align-items: center;
+  - flex-wrap: Controls whether flex items should wrap onto multiple lines.
+    flex-wrap: wrap;
 
+Media Queries:
+
+Media queries allow you to apply CSS rules based on conditions like screen size, device type, and orientation, which is essential for responsive design.
+
+Syntax Example:
+@media (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+}
+
+Common Media Query Breakpoints:
+- Mobile: @media (max-width: 600px)
+- Tablet: @media (min-width: 601px) and (max-width: 768px)
+- Desktop: @media (min-width: 769px)
+
+Deployment Options:
+1. AWS (Amazon Web Services): Comprehensive cloud platform.
+2. GCP (Google Cloud Platform): Cloud computing services by Google.
+3. Azure: Microsoft’s cloud platform.
+4. Firebase: Google’s platform for mobile and web application development.
+5. Vercel: Optimized for frontend frameworks and static sites.
+6. Netlify: Simple and powerful deployment platform for modern web projects.
