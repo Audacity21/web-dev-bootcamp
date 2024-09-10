@@ -1,0 +1,46 @@
+Goal: How to build applications in general.
+
+Structure: 
+
+Steps to build an applications:
+1) Idea.
+2) Know how to collaborate with people.
+3) Knowledge of the technology that you're using.
+4) How to share it with the public.
+
+Session 1: Big picture.
+
+How many ways of sharing files do you know?
+1) Github
+2) Drive
+3) Whatsapp
+4) Vercel
+5 )Share it
+6) netlify
+7) Anydesk
+
+Centralised Version control system:
+
+Disadvantages:
+1) Accessing at same time inefficient
+2) Previous versions
+3) Central system may get damaged
+4) multiple changes to same file.
+
+Git - Distributed Version control system:
+Central server. 
+
+Git vs Github: Git - technology
+github: interface
+
+Terminologies: 
+1) Repository: Project 
+2) Readme: information about project
+3) .gitignore: files to be excluded
+4) clone:
+
+Commands:
+1) git clone <link>
+
+
+
