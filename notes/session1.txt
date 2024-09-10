@@ -38,9 +38,35 @@ Terminologies:
 2) Readme: information about project
 3) .gitignore: files to be excluded
 4) clone:
+5) commmit: 
+6) push: 
 
 Commands:
 1) git clone <link>
+2) git status: status of our files.
+3) git add 
+ - git add . : add the entire files that are created.
+ - git add <filename1> <filename2>
+4) git commit
+5) git revert
+6) git push
+7) git pull
 
+HTML, CSS, JS- Human body.
+
+Website and Web application.
+
+HTML: Skeleton
+CSS: Skin
+Js: Organs
+
+HTML: 
+<html>
+<h1>
+<head>
+<body>
+<div>
+<img>
+<p>
 
 
