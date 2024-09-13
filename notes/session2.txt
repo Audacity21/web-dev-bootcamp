@@ -1,0 +1,12 @@
+Introduction to JavaScript
+
+history: 
+
+ECMA: ES6
+ECMAScript
+
+Execution:
+1) browser
+2) online compilers
+3) NodeJS
+4) HTML -> preferred in session
