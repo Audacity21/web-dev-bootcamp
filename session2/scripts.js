@@ -152,22 +152,22 @@ const people = [
 // doJobs();
 
 
-let data = []
-const movies = async () => {
-    let response = await fetch("https://freetestapi.com/api/v1/movies");
-    console.log(response);
-    data = await response.json();
-    console.log(data);
-    const peopleHTML = people.map((person) =>{
-        return `
-          <div class="card">
-            <h3>Name: ${person.name}</h3>
-            <h3>Age: ${person.age}</h3>
-          </div>
-        `
-    }).join('');
-    return peopleHTML;
-}
+// let data = []
+// const movies = async () => {
+//     let response = await fetch("https://freetestapi.com/api/v1/movies");
+//     console.log(response);
+//     data = await response.json();
+//     console.log(data);
+//     const peopleHTML = people.map((person) =>{
+//         return `
+//           <div class="card">
+//             <h3>Name: ${person.name}</h3>
+//             <h3>Age: ${person.age}</h3>
+//           </div>
+//         `
+//     }).join('');
+//     return peopleHTML;
+// }
 
 // movies();
 
@@ -178,11 +178,11 @@ const movies = async () => {
 // let username = prompt("Enter your name:")
 // console.log(username);
 
-const callMovies = async () => {
-    document.getElementById("title").innerHTML = await movies();
-}
+// const callMovies = async () => {
+//     document.getElementById("title").innerHTML = await movies();
+// }
 
-callMovies();
+// callMovies();
 
 //          <div>
 //             <h3>${person.name}</h3>
@@ -204,3 +204,45 @@ callMovies();
 //     <h3>${person.name}</h3>
 //     <h3>${person.age}</h3>
 //   </div>
+
+
+let data=[]
+
+const getAnime = async () => {
+    const response = await fetch("https://api.jikan.moe/v4/anime");
+    console.log(response);
+    data = await response.json();
+    console.log(data);
+    const animeHTML = data.data.map((anime)=>{
+        return `
+            <div>
+                <h3>${anime.title}</h3>
+                <img src=${anime.images.jpg.image_url} />
+            </div>
+        `
+    })
+    return animeHTML;
+}
+
+const renderAnime = async () => {
+    document.getElementById("animeList").innerHTML = await getAnime();
+}
+
+const filterAnime = () => {
+    const getQuery = document.getElementById("searchBox").value;
+    console.log(getQuery);
+    console.log(data);
+    const filteredAnime = data.data.filter((anime) => 
+        anime.title.toLowerCase().includes(getQuery.toLowerCase())
+    );
+
+    const animeHTML = filteredAnime.map((anime) => `
+        <div>
+            <h3>${anime.title}</h3>
+            <img src=${anime.images.jpg.image_url} />
+        </div>
+    `).join('');
+    document.getElementById("animeList").innerHTML = animeHTML;
+}
+
+renderAnime();

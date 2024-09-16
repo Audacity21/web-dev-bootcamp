@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Session 1</title>
-    <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anime List</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="title">
-        
+  <div class="container">
+    <h1>Anime List</h1>
+    <input type="text" id="searchBox" placeholder="Search for an anime..." onkeyup="filterAnime()">
+    <div id="animeList" class="anime-list">
+
     </div>
-    <script src="scripts.js"></script>
+  </div>
+
+  <script src="scripts.js"></script>
 </body>
 </html>
