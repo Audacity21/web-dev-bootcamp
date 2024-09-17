@@ -1,0 +1,167 @@
+
+React Lecture Notes
+
+1. React vs JavaScript: Library vs Framework
+   - JavaScript is the core language of the web, but as your app grows, managing it with vanilla JavaScript becomes harder.
+   - React is a library, not a framework. It helps you build user interfaces in a structured, component-based manner. The term "library" means that you can use it along with other tools like routing libraries, state management tools, etc.
+   - React code is written in JSX, which is transpiled to JavaScript and compiled into HTML and JavaScript files.
+     - React = Easier to maintain UIs, especially for dynamic apps with a lot of state.
+   - Frameworks (like Angular, Vue) are opinionated, meaning they dictate the entire structure of your app.
+
+2. Single Page vs Multi-Page Applications
+   - Single Page Application (SPA): Loads a single HTML page and updates dynamically as the user interacts, leading to faster transitions between pages. Uses React Router to manage routes.
+   - Multi-Page Application (MPA): Each page is reloaded from the server. Often slower transitions.
+   - React excels in SPAs, where users need a smooth, fast, and dynamic experience.
+
+3. Components in React
+   - React’s core concept is component-based architecture. 
+   - Each part of the UI is a component (e.g., button, form, header).
+   - Components make code reusable and maintainable.
+   - Components can be function-based or class-based:
+     - Function Component:
+       ```js
+       function Header() {
+         return <h1>Welcome</h1>;
+       }
+       export default Header;
+       ```
+     - Class Component: // Not useful right now so not covered during class.
+       ```js
+       class Header extends React.Component {
+         render() {
+           return <h1>Welcome</h1>;
+         }
+       }
+       export default Header;
+       ```
+
+4. Virtual DOM vs Real DOM
+   - Real DOM: Slow because updating the DOM requires rendering the entire UI from scratch.
+   - Virtual DOM: React creates a virtual copy of the DOM and only changes parts of the actual DOM that need updating. This results in faster UI updates and better performance.
+
+5. State Management
+   - React allows you to manage state within components.
+   - State: The data that a component manages and can change over time.
+     - Example using useState hook:
+       ```js
+       import React, { useState } from 'react';
+
+       function Counter() {
+         const [count, setCount] = useState(0);
+         return (
+           <div>
+             <p>Count: {count}</p>
+             <button onClick={() => setCount(count + 1)}>Increment</button>
+           </div>
+         );
+       }
+       export default Counter;
+       ```
+
+6. Are There Better Frameworks Than React?
+   - Yes, alternatives include Angular, Vue, Svelte.
+   - React’s ecosystem, community, and ease of integration with other libraries make it extremely popular.
+   - Why React?
+     - Flexibility, fast rendering with virtual DOM, and a huge ecosystem (e.g., Redux, Next.js, etc.).
+   
+7. Node.js and NPM
+   - Node.js: JavaScript runtime for backend applications. Also used to run build tools for frontend apps like React.
+   - NPM (Node Package Manager): Used to install third-party libraries.
+   - React is managed with NPM packages. For example:
+     ```bash
+     npm install react react-dom
+     ```
+
+8. Setting Up a React Project
+   - CDN Setup:
+     - You can quickly use React by linking it via CDN:
+       ```html
+       <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+       <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+       ```
+   - Vite vs Create React App (CRA):
+     - Vite: Fast build tool, modern. Supports hot module replacement and fast development.
+     - CRA: Popular starter template for React, but slower compared to Vite.
+
+     Create React App setup:
+     ```bash
+     npx create-react-app my-app
+     cd my-app
+     npm start
+     ```
+
+9. package.json and babel configuration
+   - package.json: Keeps track of dependencies and scripts for running the app.
+     - Example:
+       ```json
+       {
+         "name": "my-app",
+         "version": "1.0.0",
+         "scripts": {
+           "start": "react-scripts start",
+           "build": "react-scripts build"
+         },
+         "dependencies": {
+           "react": "^17.0.2"
+         }
+       }
+       ```
+   - Babel: A JavaScript transpiler that turns JSX and modern JS into compatible JS. React apps typically use Babel for compatibility.
+
+10. Code Cleanup
+   - Always clean up the boilerplate code provided by tools like CRA or Vite.
+   - Remove unnecessary files like logo, service workers, and extra CSS.
+
+11. Styles in React
+   - React provides several ways to style components:
+     - Inline Styles: Directly apply styles using the style attribute.
+       ```js
+       <h1 style={{ color: 'red' }}>Hello</h1>
+       ```
+     - CSS/SCSS Files: Import CSS files and apply classes.
+       ```js
+       import './App.css';
+       <h1 className="header">Hello</h1>
+       ```
+     - CSS-in-JS libraries: Like Styled Components and Emotion, which allow you to write styles within JavaScript code.
+       ```js
+       import styled from 'styled-components';
+       const Title = styled.h1`
+         color: red;
+       `;
+       ```
+
+12. Common Components and React Router
+   - Introduce React Router for building Single Page Applications (SPA) with multiple routes:
+     ```bash
+     npm install react-router-dom
+     ```
+     - Basic Setup:
+       ```js
+       import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
+       function App() {
+         return (
+           <Router>
+             <Routes>
+               <Route path="/" element={<Home />} />
+               <Route path="/about" element={<About />} />
+             </Routes>
+           </Router>
+         );
+       }
+       export default App;
+       ```
+
+13. Event Listeners in React
+   - React has synthetic events for adding event listeners to components. Events like onClick, onChange, etc.
+   - Example:
+     ```js
+     function Button() {
+       function handleClick() {
+         alert("Button clicked!");
+       }
+
+       return <button onClick={handleClick}>Click Me!</button>;
+     }
+     ```
