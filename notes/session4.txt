@@ -1,0 +1,17 @@
+npm create vite@latest 
+cd react-revision
+npm install
+npm run dev
+remove unnecessary files
+
+Material UI -> Google
+Mantine -> Leetcode, Mentorpick
+Charka UI
+Tailwind CSS, Bootstrap
+
+1) https://audacity21.github.io/MSWD-PRACTICE/#/
+2) Weather App
+3) Quiz App
+4) Calculator
+5) Notes
+6 )Food App (mandatory)
