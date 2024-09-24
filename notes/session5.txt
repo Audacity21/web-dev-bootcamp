@@ -1,0 +1,45 @@
+mysql
+postgresql
+mongodb
+oracledb
+firebase.
+sqlite
+
+server
+
+fetching using REST APIs
+
+For creating REST APIs
+express - NODEJS
+Django Rest Framework
+Spring Boot
+
+Drawback: 
+1) We have to create our own server - cost, reliability decreases.
+2) Coding is complex.
+
+Firebase : serverless backend
+
+https://firebase.google.com/
+
+go to console
+create a project
+give a name
+register your web app
+npm install firebase
+create config file and add configuration
+
+create firestore database
+
+collections - > table name
+document -> one entry in table
+field -> values in the document
+
+fetching data from firebase: https://firebase.google.com/docs/firestore/query-data/get-data#web
+sending data to firebase : https://firebase.google.com/docs/firestore/manage-data/add-data
+
+
+Next lab: 
+1) filtering
+2) edit
+3) deletion
