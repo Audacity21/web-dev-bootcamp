@@ -6,12 +6,7 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAcQSvHrSiwXsqYBaxKCX96U7NAyY7S89Q",
-  authDomain: "web-bootcamp-6e261.firebaseapp.com",
-  projectId: "web-bootcamp-6e261",
-  storageBucket: "web-bootcamp-6e261.appspot.com",
-  messagingSenderId: "337028045880",
-  appId: "1:337028045880:web:cea7e6c806c5bc46381acd",
+  // put your own keys here
 };
 
 // Initialize Firebase
