@@ -1,0 +1,28 @@
+authentication: https://firebase.google.com/docs/auth/web/google-signin
+conditional redering
+
+key: value
+https://redux-toolkit.js.org/
+
+cart map: 
+
+key: item.name
+value : 
+{
+    name: "",
+    price: 0,
+    quantity: 1,
+}
+
+
+
+biryani: {
+    name: "biryani"
+    price: 100
+    quantity: 1
+},
+rice: {
+    name: "rice"
+    price: 10
+    quantity: 2
+}
