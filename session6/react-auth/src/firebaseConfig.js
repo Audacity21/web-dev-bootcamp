@@ -6,7 +6,7 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  // put your own keys here
+  // paste your own firebase config
 };
 
 // Initialize Firebase

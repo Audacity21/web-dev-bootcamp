@@ -1,0 +1,63 @@
+Payment: 
+
+Stripe.
+Razorpay.
+Phonepe.
+
+https://dashboard.stripe.com/ -> Create an account -> Run the account on test mode
+
+express
+
+HTTP REQUESTS:
+get -> used to fetch data
+post -> modify some data or send some data to the server
+put -> update some data
+delete -> delete data
+patch -> same as put
+
+reduce -> value, item
+
+items = [
+    {
+        name: "Rice",
+        price: 100,
+        quantity: 2
+    },
+    {
+        name: "Dal",
+        price: 50,
+        quantity: 2
+    }
+]
+
+CORS: Cross Origin Requests
+
+cors - > library for manipulating cross origin requests
+
+https://docs.stripe.com/
+
+// data of line items
+[
+    {
+        currency: 'inr',
+        product_data: {
+            name
+        },
+        unit_amount: 100 * 100,
+        quantity: 2
+    }
+]
+
+https://www.npmjs.com/package/stripe
+npm install @stripe/react-stripe-js @stripe/stripe-js
+
+in server: 
+convert items object into line_items
+create a checkout session in stripe :https://docs.stripe.com/api/checkout/sessions/create
+return session id in response
+
+in front-end: 
+receive session:id
+initialize stripe promise with public key
+create a vairiable with the response of stripe promise
+send session.id to 
