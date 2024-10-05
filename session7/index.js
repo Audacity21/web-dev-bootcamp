@@ -22,8 +22,8 @@ app.post('/create-checkout-session', async(req, res) => {
                     name: item.name,
                 },
                 unit_amount: item.price * 100,
-                quantity: item.quantity
-            }
+            },
+            quantity: item.quantity
         }));
         
         const session = await stripe.checkout.sessions.create({

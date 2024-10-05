@@ -1,0 +1,38 @@
+git -> OSS
+
+OSS - > Open Source Software
+
+CSS -> The code is not publicly available
+
+Issues -> contains issues in open source Software
+Fork -> creates a copy of software with you as owner
+git pull -> pull all the changes that were made.
+
+Good first issues: 
+1) https://goodfirstissue.dev/language/javascript
+2) https://goodfirstissues.com/
+3) https://github.com/mbashem/cftracker -> Good repo to contribute to.
+4) https://hacktoberfest.com/
+5) https://summerofcode.withgoogle.com/
+6) https://mantine.dev/ -> Alternative for Material UI
+7) https://developers.google.com/community/gdsc-solution-challenge
+
+React Hooks:
+- useState()
+- useEffect()
+
+- useContext()
+- useParams()
+- useQuery()
+
+emails: https://dashboard.stripe.com/settings/emails
+library for sending emails in node: https://nodemailer.com/
+
+Build smaller project: 
+1) compenent -> link to another component
+1) Calculator
+2) Weather app
+3) Jokes app
+
+DJango: Python
+Spring Boot: Java

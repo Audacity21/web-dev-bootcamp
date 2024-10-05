@@ -11,7 +11,7 @@ const Cart = (props) => {
   const stripePromise = loadStripe(""); //replace wit your own public key
 
   const handleCheckout = async () => {
-    const response = await fetch("http://localhost:4242/create-checkout-session", {
+    const response = await fetch("https://payment-server-7ocd.onrender.com/create-checkout-session", {
       method: "POST",
       headers : {
         "Content-Type": "application/json",
@@ -39,10 +39,10 @@ const Cart = (props) => {
     }
   }
   return (
-    <div>
+    <div className="cart__container">
       <h1>Cart</h1>
       <h1>Total: {totalPrice}</h1>
-      <ul>
+      <ul className="cart__ul">
         {Object.keys(cart).length > 0 ? (
           Object.entries(cart).map(([key, item]) => {
             return (
